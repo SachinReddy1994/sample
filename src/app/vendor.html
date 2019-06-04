@@ -1,0 +1,67 @@
+<h3> Add Vendor Details</h3>
+<!-- <tr>
+        <th>Vendor Name</th>
+        <th>Vendor Email</th>
+        <th>Vendor PhoneNumber</th>
+        <th>House Number</th>
+        <th>Landmark</th>
+        <th>Area</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
+    </tr> 
+<tr *ngFor="let vend of vendors">
+    <td>{{vend.name}}</td>
+    <td>{{vend.email}}</td>
+    <td>{{vend.phoneNumber}}</td>
+    <td>{{vend.address.houseNumber}}</td>
+    <td>{{vend.address.landmark}}</td>
+    <td>{{vend.address.area}}</td>
+    <td>{{vend.address.city}}</td>
+    <td>{{vend.address.state}}</td>
+    <td>{{vend.address.pincode}}</td>
+</tr> -->
+
+<table border="2" style="background-image: url('assets/curry.jpg');background-position: center">
+    
+    <tr>
+        <td>Vendor Name</td>
+        <td><input type="text" [(ngModel)]="vendors.name" /></td>
+    </tr>
+    <tr>
+        <td>Vendor Email</td>
+        <td><input type="text" [(ngModel)]="vendors.email" /></td>
+    </tr>
+    <tr>
+        <td>Vendor PhoneNumber</td>
+        <td><input type="text" [(ngModel)]="vendors.phoneNumber" /></td>
+    </tr>
+    <tr>
+        <td>House Number</td>
+        <td><input type="text" [(ngModel)]="vendors.addresshouseNumber" /></td>
+    </tr>
+    <tr>
+        <td>Landmark</td>
+        <td><input type="text" [(ngModel)]="vendors.addresslandmark" /></td>
+    </tr>
+    <tr>
+        <td>Area</td>
+        <td><input type="text" [(ngModel)]="vendors.addressarea" /></td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td><input type="text" [(ngModel)]="vendors.addresscity" /></td>
+    </tr>
+    <tr>
+        <td>State</td>
+        <td><input type="text" [(ngModel)]="vendors.addressstate" /></td>
+    </tr>
+    <tr>
+        <td>Pincode</td>
+        <td><input type="text" [(ngModel)]="vendors.addresspincode" /></td>
+    </tr>
+    <tr>
+       <!-- <button routerLink="item"> Add Item </button>  -->
+        <input type="button" class="btn btn-primary" value="Next" (click)="addVendor()">
+    </tr>
+</table>

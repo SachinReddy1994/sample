@@ -1,0 +1,12 @@
+<h3>Add Items to Vendor</h3>
+<table border="2">
+        <tr>
+                <td>Item Name</td>
+                <td><input type="text" [(ngModel)]="vendors.itemsname" /></td>
+            </tr>
+            <tr>
+                    <td>Item Price</td>
+                    <td><input type="text" [(ngModel)]="vendors.itemsprice" /></td>
+                </tr>
+            <input type="button" class="btn btn-success" value="Add Vendor" (click)="addVendor()">
+</table>
