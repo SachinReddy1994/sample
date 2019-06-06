@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="otherRow">
+    <div class="vendorWrap">
+      <div class="row">
+        <h5>Search by vendor name</h5>
+      </div>
+      <div class="row">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="enter vendor name" aria-label=""
+            aria-describedby="vendorName" [(ngModel)]="vendorName">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="button" (click)="searchVendorName()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cityWrap">
+      <div class="row">
+        <h5>Search by city name</h5>
+      </div>
+      <div class="row">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="enter city name" aria-label=""
+            aria-describedby="cityName" [(ngModel)]="cityName">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="button" (click)="searchCityName()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row addVendor">
+    <a [routerLink]="['/home/addvendor']">Add Vendor</a>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.otherRow{
+    height: 40vh;
+    padding: 20px;
+    margin-bottom: 5%;
+    .vendorWrap {
+      float: left;
+      padding-left:5%;
+    }
+    .vendorWrap::after{
+      content: "";
+      background-color: #000;
+      position: absolute;
+      width: 2px;
+      height: 30vh;
+      left: 50%;
+      display: block;
+      top: 90px;
+    }
+    .cityWrap {
+      float: right;
+      padding-right:7%;
+    }
+}
+
+.addVendor{
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}

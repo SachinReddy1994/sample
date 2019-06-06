@@ -1,33 +1,34 @@
-﻿import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent }  from './app.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AddvendorComponent } from './addvendor/addvendor.component';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { from } from 'rxjs';
+import { SearchresultsComponent } from './searchresults/searchresults.component';
 import { HttpClientModule } from '@angular/common/http';
-import {Routes,RouterModule} from '@angular/router';
-import { AddVendor } from './app.addvendor';
-import { AddItem } from './app.additem';
-import { SearchCity } from './app.searchcity';
-import { SearchVendor } from './app.searchvendor';
-
-
-const route:Routes=[
-
-    {path:"add",component:AddVendor},
-     {path:"item",component:AddItem},
-    {path:"city",component:SearchCity},
-    {path:"vname",component:SearchVendor},
-];
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        FormsModule,HttpClientModule,RouterModule.forRoot(route)
-    ],
-    declarations: [
-        AppComponent,AddVendor,AddItem,SearchCity,SearchVendor
-		],
-    providers: [ ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    AddvendorComponent,
+    HomeComponent,
+    DashboardComponent,
+    SearchresultsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-
 export class AppModule { }

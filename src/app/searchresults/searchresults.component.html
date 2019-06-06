@@ -1,0 +1,79 @@
+<div class="container" *ngIf="parameter == vendor">
+  <div>
+    <h1><u><em>Vendor Items </em></u></h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>ITEM NAME</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>ITEM PRICE(&#x20b9;)</h2>
+      </div>
+    </div>
+    <div class="addedItem">
+      <div class="row" *ngFor="let item of items">
+        <div class="col-sm-6">
+          {{ item.name }}
+        </div>
+        <div class="col-sm-6">
+          {{ item.price }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="parameter == city">
+  <div>
+    <h1><u><em>Vendor Details </em></u></h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Vendor NAME</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor HouseNumber</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor Landmark</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor Area</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor City</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor State</h2>
+      </div>
+      <div class="col-sm-6">
+        <h2>Vendor Pincode</h2>
+      </div>
+    </div>
+    <div class="addressDetails">
+      <div class="row" *ngFor="let v of vendors">
+        <div class="col-sm-6">
+          {{ v.name }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addresshouseNumber }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addresslandmark }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addressarea }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addresscity }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addressstate }}
+        </div>
+        <div class="col-sm-6">
+          {{ v.addresspincode }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
