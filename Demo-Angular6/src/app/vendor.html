@@ -1,0 +1,113 @@
+<div class="container" *ngIf="isVendorDetails == false">
+    <form>
+      <div class="form-group row">
+        <label for="Name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.name" class="form-control" name="name" placeholder="Name" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-6">
+          <input type="email" [(ngModel)]="vendor.email" class="form-control" name="vendorEmail" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="PhoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+        <div class="col-sm-6">
+          <input type="number" [(ngModel)]="vendor.phoneNumber" class="form-control" name="PhoneNumber"
+            placeholder="Phone Number" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="HouseNumber" class="col-sm-2 col-form-label">House Number</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addresshouseNumber" class="form-control" name="HouseNumber"
+            placeholder="House Number" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Landmark" class="col-sm-2 col-form-label">Landmark</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addresslandmark" class="form-control" name="Landmark"
+            placeholder="Landmark" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="addressarea" class="col-sm-2 col-form-label">Area/Street Name</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addressarea" class="form-control" name="addressarea"
+            placeholder="Street Name" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="City" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addresscity" class="form-control" name="City" placeholder="City" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="State" class="col-sm-2 col-form-label">State</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addressstate" class="form-control" name="State" placeholder="State" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Pincode" class="col-sm-2 col-form-label">Pincode</label>
+        <div class="col-sm-6">
+          <input type="text" [(ngModel)]="vendor.addresspincode" class="form-control" name="Pincode"
+            placeholder="Pincode" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4 offset-sm-8">
+          <button type="button" class="btn btn-primary" (click)="markVendorDetails()">Next</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="container" *ngIf="isVendorDetails == true">
+    <form>
+      <div class="form-group row">
+        <div class="form-group col-sm-4">
+          <label for="ItemName" class="col-form-label">Item Name</label>
+          <input type="text" class="form-control" [(ngModel)]="item.name" name="itemName" placeholder="Item Name" required>
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="ItemPrice" class="col-form-label">Item Price</label>
+          <input type="number" class="form-control" [(ngModel)]="item.price" name="itemPrice" placeholder="Price" required>
+        </div>
+        <div class="col-sm-2 submitVendor">
+          <button type="button" class="btn btn-primary" (click)="addItem()">Add Item</button>
+        </div>
+        <div class="submitVendor">
+          <button type="button" class="btn btn-success" (click)="submitVendor()">Submit</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <div>
+      <h1><u><em>Items Added So Far</em></u></h1>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>ITEM NAME</h2>
+        </div>
+        <div class="col-sm-6">
+          <h2>ITEM PRICE(&#x20b9;)</h2>
+        </div>
+      </div>
+      <div class="addedItems">
+        <div class="row" *ngFor="let item of items">
+          <div class="col-sm-6">
+            {{ item.name }}
+          </div>
+          <div class="col-sm-6">
+            {{ item.price }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

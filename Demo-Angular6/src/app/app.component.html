@@ -1,0 +1,51 @@
+﻿<h1>WELCOME TO ANGULAR 6</h1>
+
+<!-- <nav>
+    
+    <a routerLink="add"> Add Vendor   </a>
+   
+    <a routerLink="city"> Search By City  </a>
+    <a routerLink="vname">  Search By Vendor</a>
+</nav> -->
+
+
+<div class="container">
+    <div class="otherRow">
+      <div class="vendorWrap">
+        <div class="row">
+          <h5>Search by vendor name</h5>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="enter vendor name" aria-label=""
+              aria-describedby="vendorName" [(ngModel)]="name">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button" (click)="searchVendor()">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cityWrap">
+        <div class="row">
+          <h5>Search by city name</h5>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="enter city name" aria-label=""
+              aria-describedby="cityName" [(ngModel)]="addresscity">
+            <div class="input-group-append">
+            <!-- <a [routerLink]="['city']" class="btn btn-primary" role="button">Search City</a> -->
+              <button class="btn btn-success" type="button" (click)="searchByCity()">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row addVendor">
+      <a [routerLink]="['add']" class="btn btn-primary" role="button">Add Vendor</a>
+    </div>
+  </div>
+  
+<router-outlet></router-outlet>
+
+

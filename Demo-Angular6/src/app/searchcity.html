@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-info text-center text-white">
+<h3> Search Vendor Location</h3>
+</div>
+<div class="card-body text-center">
+
+<hr/> 
+
+<table class="table table-striped">
+<thead class="thead-info">
+    <th> Vendor Name</th>
+    <th>Vendor Contact</th>
+    <th>Landmark </th>
+    <th>Area</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Pincode</th>
+</thead>
+<tr *ngFor="let v of vendors">
+    <td>{{v.name}}</td>
+    <td>{{v.phoneNumber}}</td>
+    <td>{{v.addresslandmark}}</td>
+    <td>{{v.addressarea}}</td>
+    <td>{{v.addresscity}}</td>
+    <td>{{v.addressstate}}</td>
+    <td>{{v.addresspincode}}</td>
+
+
+</tr>
+</table>
+</div>
+</div>
+</div>

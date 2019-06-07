@@ -1,0 +1,28 @@
+<h4>Vendor and Items</h4>
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-center text-white">
+<h3>  Vendor Location</h3>
+</div>
+<div class="card-body text-center">
+
+<hr/> 
+
+<table class="table table-striped">
+<thead class="thead-info">
+    <th> Vendor Name</th>
+    <th>Vendor Contact</th>
+    <th>Item Name/th>
+    <th>Item Price</th>
+</thead>
+<tr *ngFor="let v of vendors">
+    <td>{{v.name}}</td>
+    <td>{{v.phoneNumber}}</td>
+    <td>{{v.foodList.name}}</td>
+    <td>{{v.foodList.price}}</td>
+
+</tr>
+</table>
+</div>
+</div>
+</div>
